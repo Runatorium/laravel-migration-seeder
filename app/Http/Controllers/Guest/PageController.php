@@ -10,7 +10,7 @@ class PageController extends Controller
 {
     public function index()
     {
-        $trains = Train::where('orario_di_partenza', '>=', date('y/m/d'));
+        $trains = Train::where('orario_di_partenza', '=', date("y-m-d"));
         return view('home', compact('trains'));
     }
 }
