@@ -19,6 +19,7 @@ class TrainTabSeeder extends Seeder
         for ($i = 0; $i < 10; $i++) {
             $train = new train();
 
+            $train->id = $i;
             $train->azienda = $faker->company();
             $train->stazione_di_partenza = $faker->city();
             $train->stazione_di_arrivo = $faker->city();
